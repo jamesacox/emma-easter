@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Emma's Easter Egg Hunt</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Emma's Easter Egg Hunt</h1>
+            <p class="subtitle">Visit every square to collect the eggs!</p>
+        </header>
+
+        <div id="clue-bar">
+            <div id="clue-letters"></div>
+        </div>
+
+        <div id="grid-wrapper">
+            <div id="grid"></div>
+        </div>
+
+        <div id="controls">
+            <button id="undo-btn" disabled>&#x21A9; Undo</button>
+            <span id="step-count">0 / 0</span>
+            <button id="reset-btn">&#x21BB; Reset</button>
+        </div>
+
+        <div id="win-overlay" class="hidden">
+            <div id="win-content">
+                <div class="win-emoji">&#127881;</div>
+                <h2>Amazing work Emma!</h2>
+                <p>Your next clue is:</p>
+                <div id="win-clue"></div>
+                <button id="play-again-btn">Play Again</button>
+            </div>
+        </div>
+
+        <div id="stuck-toast" class="hidden">
+            You're stuck! Tap <strong>Undo</strong> to go back.
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
